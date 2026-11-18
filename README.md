@@ -51,8 +51,9 @@ Uts/
 │   ├── galeri.php             # Halaman dokumentasi galeri dengan modal preview
 │   ├── kontak.php             # Halaman formulir kontak (CRUD Create ke MySQL)
 │   └── produk.php             # Halaman daftar proyek dengan filter kategori GET
-├── index.php                  # Halaman utama (Landing Page)
-└── README.md                  # Dokumentasi proyek
+├── README.md                  # Ringkasan proyek
+├── db_uts_web.sql             # Database yang digunakan
+└── index.php                  # Halaman utama (Landing Page)
 ```
 
 ---
@@ -77,6 +78,7 @@ Dalam pengembangan aplikasi ini, beberapa standar teknis diterapkan untuk memast
 - **Browser:** Google Chrome, Mozilla Firefox, atau Microsoft Edge.
 
 ### 2. Konfigurasi Database
+Cara 1 :
 1. Jalankan modul **Apache** dan **MySQL** pada XAMPP Control Panel.
 2. Buka **phpMyAdmin** (`http://localhost/phpmyadmin`).
 3. Buat database baru bernama `db_uts_web`, lalu jalankan kueri SQL berikut untuk membuat tabel `pesan_kontak`:
@@ -93,6 +95,11 @@ CREATE TABLE IF NOT EXISTS pesan_kontak (
     tanggal_kirim TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ```
+Cara 2 :
+1. Buka **phpMyAdmin** (`http://localhost/phpmyadmin`).
+2. buat database dengan nama  `db_uts_web`
+3. pilih import
+4. masukan file db_uts_web.sql 
 
 ### 3. Menjalankan Aplikasi di Lokal
 1. Salin folder proyek `Uts` ke dalam direktori root server lokal Anda:
